@@ -7,6 +7,7 @@ I've decided to work through this book because I enjoy Python and I felt like so
 ## Projects by Chapter
 1. Python Basics
 2. Flow Control
+    *Guess the Number v2.py
 3. Functions
 4. Lists
 5. Dictionaries and Structuring Data
@@ -17,6 +18,7 @@ I've decided to work through this book because I enjoy Python and I felt like so
 10. Organizing Files
 11. Debugging
 12. Web Scraping
+13. Working with Execel Spreadsheets
 14. Working with Google Spreadsheets
 15. Working with PDF and Word Documents
 16. Working with CSV Files and JSON Data
