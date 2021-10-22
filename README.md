@@ -7,7 +7,8 @@ I've decided to work through this book because I enjoy Python and I felt like so
 ## Projects by Chapter
 1. Python Basics
 2. Flow Control
-    *Guess the Number v2.py
+    * Guess the Number v2.py
+    * Rock Paper Scissor Game.py - Incomplete, will have to revisit
 3. Functions
 4. Lists
 5. Dictionaries and Structuring Data
