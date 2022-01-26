@@ -1,85 +1,78 @@
 # A rock, paper, scissors game
-# The expected output is below the code, which I will have to revisit in the future.
+# I have included the expected output is below the code.
 
 import random
 import sys
 
+
+def get_user_input():
+    user_input = input("Enter your move: (r)ock (p)aper (s)cissors or (q)uit\n")
+    return user_input
+
+
 myList = ["ROCK", "PAPER", "SCISSORS"]
 response_rock, response_paper, response_scissors = ["r", "p", "s"]
+wins, losses, ties = [0, 0, 0]
 
 print("\nROCK, PAPER, SCISSORS")
-print("O Wins, 0 Losses, 0 Ties")
-print("Enter your move: (r)ock (p)aper (s)cissors or (q)uit")
-user_input = input()
 
 while True:
-    print(user_input)
-    random_hand = random.choices(myList, weights=None, k=1)  # random.choice(sequences[list/tuple name], weights
-    # [possibility of each value, cum_weights[same, possibility is accumulated], k[an int defining the length of the
-    # returned list]
-    wins, losses, ties = [0, 0, 0]
+    print(f"{wins} Wins, {losses} Losses, {ties} Ties")
+    loser_input = get_user_input()
+    random_hand = random.choice(myList)
 
-    if user_input == "p":
-        print("PAPER versus...\n" + str(random_hand))
-        if str(random_hand) == "PAPER":
+    if loser_input == "p":
+        print("PAPER versus...\n" + random_hand)
+        if random_hand == "PAPER":
             print("It is a tie!")
-            ties = ties + 1
-        if str(random_hand) == "ROCK":
+            ties += 1
+        if random_hand == "ROCK":
             print("You win!")
-            wins = wins + 1
-        if str(random_hand) == "SCISSORS":
+            wins += 1
+        if random_hand == "SCISSORS":
             print("You lost!")
-            losses = losses + 1
-        break
-
-    elif user_input == "r":
+            losses += 1
+    elif loser_input == "r":
         print("ROCK versus...\n" + str(random_hand))
         if random_hand == "PAPER":
             print("You Lose!")
-            losses = losses + 1
+            losses += 1
         if random_hand == "ROCK":
             print("It is a Tie!")
-            ties = ties + 1
+            ties += 1
         if random_hand == "SCISSORS":
             print("You Win!")
-            wins = wins + 1
-        break
-
-    elif user_input == "s":
+            wins += 1
+    elif loser_input == "s":
         print("SCISSORS versus...\n" + str(random_hand))
         if random_hand == "PAPER":
             print("You Win!")
-            wins = wins + 1
+            wins += 1
         if random_hand == "ROCK":
             print("You Lose!")
-            losses = losses + 1
+            losses += 1
         if random_hand == "SCISSORS":
             print("It is a Tie!")
-            ties = ties + 1
-        break
-
-    elif user_input == "q":
+            ties += 1
+    elif loser_input == "q":
         sys.exit()
     else:
-        print("You've entered the wrong entry\n" + str(random_hand))
-    print("%ds Wins, %ds Losses, %ds Ties" % (wins, losses, ties))
+        print(f"You've entered the wrong entry. Try again.\n")
 
 
-"""
-ROCK, PAPER, SCISSORS
-0 Wins, 0 Losses, 0 Ties
-Enter your move: (r)ock (p)aper (s)cissors or (q)uit
-p
-PAPER versus...
-PAPER
-It is a tie!
-0 Wins, 1 Losses, 1 Ties
-Enter your move: (r)ock (p)aper (s)cissors or (q)uit
-s
-SCISSORS versus...
-PAPER
-You win!
-1 Wins, 1 Losses, 1 Ties
-Enter your move: (r)ock (p)aper (s)cissors or (q)uit
-q
-"""
+# ROCK, PAPER, SCISSORS
+# 0 Wins, 0 Losses, 0 Ties
+# Enter your move: (r)ock (p)aper (s)cissors or (q)uit
+# p
+# PAPER versus...
+# PAPER
+# It is a tie!
+# 0 Wins, 1 Losses, 1 Ties
+# Enter your move: (r)ock (p)aper (s)cissors or (q)uit
+# s
+# SCISSORS versus...
+# PAPER
+# You win!
+# 1 Wins, 1 Losses, 1 Ties
+# Enter your move: (r)ock (p)aper (s)cissors or (q)uit
+
