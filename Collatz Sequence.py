@@ -16,4 +16,4 @@ while not valid_input:
             collatz(user_number)
             user_number = True
     except ValueError:
-        print("must enter a positive number.")
+        print("Must enter a positive number.")
