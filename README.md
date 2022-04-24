@@ -10,7 +10,12 @@ I've decided to work through this book because I enjoy Python and I felt like so
     * Guess the Number v2.py
     * Rock Paper Scissor Game.py
 3. Functions
+    * Zigzag.py
+    * The Collatz Sequence.py
 4. Lists
+    * Comma Code.py
+    * Coin Flip Streaks.py
+    * Character Picture Grid.py
 5. Dictionaries and Structuring Data
 6. Manipulating Strings
 7. Pattern Matching with Regular Expressions
